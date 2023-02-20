@@ -1,27 +1,39 @@
 "use strict";
 
-const money = 100000;
+let purpose = Number.parseFloat(prompt('Желаемая сумма Вашего дохода'));
+let salary = Number.parseFloat(prompt('Ваш месячный доход'));
+let expensesList = Number.parseFloat(prompt('Перечислите возможные расходы зарассчитываемый период через запятую'));
+let expences  = Number.parseFloat(prompt('Восколько обойдутся обязательные статьи расходов?'));
 
-const profit = 'Фриланс';
 
-const expenses = 'Коммуналка, Питание, Бензин, Котик, Бары '
+let isDeposit = confirm('Есть ли у вас депозит в банке?');
 
-const purpose = 1000000;
+let profitFromDeposit;
 
-const period = 3;
+if (isDeposit == true) {
 
-console.log(typeof money, typeof profit);
+    profitFromDeposit = Number.parseFloat(prompt('Введите мейсячный доход с депозита'));
 
-console.log(expenses.length);
+} else profitFromDeposit = 0;
 
-console.log(`Период равен ${period}--м месяцем`);
 
-console.log(`Цель заработать ${purpose} рублей`);
+let budgetPerMonth = Math.floor(salary + profitFromDeposit - expences);
+alert(`Ваш месячный доход равен ${budgetPerMonth}`);
 
-const budgetPerDay = money / 30;
+let gainTime = Math.ceil(purpose / budgetPerMonth);
 
-console.log(`${ Math.floor(budgetPerDay)}р / в день`);
+alert(`Вы достигнете желаемого дохода через ${gainTime} месяцев`);
 
-console.log(expenses.toLowerCase());
+let budgetPerDay = Math.floor(budgetPerMonth/30);
 
-console.log(expenses.split(`, `));
+if (budgetPerDay >= 6000) {
+    alert('У вас высокий уровень дохода')
+} else if (budgetPerDay = 6000 && budgetPerDay > 3000 ) {
+    alert('У вас средний уровень дохода')
+} else if (budgetPerDay < 3000 || budgetPerDay == 0 ) {
+    alert('Вы не накопите')
+} else if (budgetPerDay < 0) {
+    alert('Что-то пошло не так')
+}; // не отрабатываает если доход меньше нуля
+
+
