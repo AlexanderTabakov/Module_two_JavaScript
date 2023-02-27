@@ -1,13 +1,37 @@
 "use strict";
 
-let firstNumber = Number.parseFloat(prompt('Введите Первое Число'));
-let secondNumber = Number.parseFloat(prompt('Введите Второе Число'));
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-alert( firstNumber + secondNumber);
-alert( firstNumber - secondNumber);
-alert( firstNumber * secondNumber);
-alert( ( firstNumber / secondNumber).toFixed(1));
-alert( firstNumber % secondNumber);
+const weekendDayIndex = [0, 6];
+const currentDayIndex = new Date().getDay();
+
+function printDay(day, index) {
+    const classes = `text ${currentDayIndex === index ? 'italic' : ''} ${weekendDayIndex.includes(index) ? 'bold' : ''}`
+    document.writeln(`<div class='${classes}'> ${day} </div>`)
+}
+
+days.forEach(printDay);
+
+
+
+
+const nums = ['295996', '334', '773', '54534', '334342', '777', '333'];
+
+function checkFirstNumber(number) {
+    const [firstNumber] = number;
+    return firstNumber === '3' || firstNumber === '7';
+
+}
+
+nums
+    .filter(checkFirstNumber)
+    .forEach((num=>console.log(num)))
+
+// console.log(nums.filter(checkFirstNumber))
+
+
+
+// nums.filter(checkFirstNumber).forEach(console.log)
 
 
 
