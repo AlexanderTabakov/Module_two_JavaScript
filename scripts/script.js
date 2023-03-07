@@ -1,27 +1,24 @@
 "use strict";
 
-const money = 100000;
+ const salaries = {
+     John: 100,
+     Ann: 160,
+     Pete: 130
+ }
 
-const profit = 'Фриланс';
+ let sum = 0;
+ for (const key in salaries) {
+     sum += salaries[key]
+ }
 
-const expenses = 'Коммуналка, Питание, Бензин, Котик, Бары '
+console.log(sum);
 
-const purpose = 1000000;
+const studentScores = {Коля: '99',Вася: '35',Петя: '70',Таня: '95',Оля: '50',Саша: '20' };
 
-const period = 3;
+for (const key in studentScores) {
+    if (studentScores [key] < 80) delete studentScores[key]
+}
 
-console.log(typeof money, typeof profit);
+console.log(studentScores);
 
-console.log(expenses.length);
 
-console.log(`Период равен ${period}--м месяцем`);
-
-console.log(`Цель заработать ${purpose} рублей`);
-
-const budgetPerDay = money / 30;
-
-console.log(`${ Math.floor(budgetPerDay)}р / в день`);
-
-console.log(expenses.toLowerCase());
-
-console.log(expenses.split(`, `));
