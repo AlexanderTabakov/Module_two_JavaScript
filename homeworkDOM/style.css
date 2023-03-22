@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.calculator__items {
+  padding-right: 30px;
+}
+
+.calculator__items-submit {
+  margin-top: 40px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.calculator__result {
+  border: 1px solid;
+  width: 30%;
+  padding: 30px;
+}
+
+.item__result {
+  font-size: 21px;
+  font-weight: 800;
+}

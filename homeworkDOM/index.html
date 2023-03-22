@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="calculator__items">
+      <div class="">
+        <h2>Ваш месячный доход?</h2>
+        <input placeholder="Введите сумму" type="text" id="income" oninput="onInputMoney(event)">
+      </div>
+
+      <div class="">
+        <h2>Перечислите какие у вас дополнительные доходы через запятую?</h2>
+        <input placeholder="Фриланс, курьер и тд" type="text" id="additionalIncome">
+      </div>
+
+      <div class="">
+        <h2>Какая сумма дополнительных доходов?</h2>
+        <input placeholder="Введите сумму" type="text" id="sumAdditionalIncome" oninput="onInputExtraMoney(event)">
+      </div>
+
+      <div class="">
+        <h2>Ваши обязательные расходы перечислите через запятую?</h2>
+        <input placeholder="проезд, коммуналка и тд" type="text" id="expenses" oninput="onInputAmount(event)">
+      </div>
+
+      <div class="">
+        <h2>Какую сумму вы бы хотели накопить?</h2>
+        <input placeholder="Введите сумму" type="text" id="savings">
+      </div>
+
+      <div class="">
+        <h2>За какой период вы бы хотели накопить желаемую сумму?</h2>
+        <input placeholder="Укажите кол-во месяцев" type="text" id="period">
+      </div>
+
+      <button class="calculator__items-submit" onclick="youArePretty()">Рассчитать</button>
+    </div>
+
+    <div class="calculator__result">
+      <div class="calculator__result-item item">
+        Ваш бюджет на месяц с учетом ваших расходов составляет: <span class="item__result" id="sumMoney"></span>
+      </div>
+
+      <div class="calculator__result-item item">
+        Ваш дневной бюджет: <span class="item__result" id="sumMoneyDay"></span>
+      </div>
+
+      <div class="calculator__result-item item">
+        Ваша цель накопить <span class="item__result" id="sumMoneyPurpose"></span> с учетом всех ваших расходов будет достигнута через <span class="item__result" id="purpose"></span> месяцев
+      </div>
+
+      <div class="calculator__result-item item">
+        Ваш уровень дохода<span class="item__result" id="incomeLevel"></span> месяцев
+      </div>
+    </div>
+  </div>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
