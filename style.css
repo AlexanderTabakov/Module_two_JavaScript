@@ -135,7 +135,7 @@ body {
 }
 
 .checkbox:checked+label::after {
-    content: url("✓.svg");
+    content: url("./checkbox.svg");
     position: absolute;
     margin: 5px;
 }
