@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <script src="./scripts/script.js"></script>
 <body>
+
+<div class="auth-form">
+    <p id="reg-switch">
+        Войти
+    </p>
+    <h2 class="form-tile">
+        Регистрация
+    </h2>
+
+    <div class="input-wrapper">
+        <label for="email">Email</label>
+        <input type="text" name="" id="email" placeholder="Введите Email" class="form-input error-box">
+
+        <label for="password">Пароль</label>
+        <input type="text" name="" id="password" placeholder="Введите Пароль" class="form-input error-box">
+
+    </div>
+
+        <div class="checkbox-email">
+            <input type="checkbox" name="checkbox" id="checkbox" class="checkbox" value="yes">
+
+            <label for="checkbox">Я согласен получать обновления на почту</label>
+        </div>
+
+        <button class="submit-btn">Регистрация</button>
+
+</div>
+   
+
     
 </body>
+
 </html>
