@@ -47,7 +47,7 @@ body {
 .input-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 5px;
 }
 
 .input-wrapper > label {
@@ -94,7 +94,7 @@ body {
     height: 52px;
     border-radius: 10px;
     color: white;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     margin-left: auto;
     margin-right: auto;
     background-color: #1A226B;
@@ -110,6 +110,7 @@ body {
     display: inline-flex;
     align-items: center;
     user-select: none;
+    margin-bottom: 10px;
 }
 
 .checkbox+label::before {
@@ -140,22 +141,27 @@ body {
     margin: 5px;
 }
 
+#error-emptyWrapper {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    color: red;
+    display: none;
+}
+
+.error-emptyWrapper {
+    display: block;
+}
+
 
 .error-box {
     border: 3px red solid;
 }
 
 
-.error-box::after {
-    content: 'Поле обязательно для запонения'
-}
-
 input::before {
     content: '*';
-    color: red;
-}
-
-.form-input:after {
-    content: 'Поле обязательно для заполнения';
     color: red;
 }
