@@ -30,7 +30,7 @@ function validatePassword() {
     } else password.classList.remove('error-box')
 }
 
-const testSubmitBtn = document.querySelector('#submit-btn')
+const testSubmitBtn = document.querySelector('#submitBtn')
 testSubmitBtn.addEventListener()
 
 
