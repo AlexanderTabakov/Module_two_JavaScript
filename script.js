@@ -16,21 +16,34 @@ function validateEmail (email) {
     return regExp.test(String(email).toLowerCase());
 }
 
-function test () {
-    const test = document.querySelector("#error-emptyWrapper")
-    test.classList.add('error-emptyWrapper')
+function errorEmptyInput () {
+    const test = document.querySelectorAll(".error-emptyWrapper")
+    // test.style.display = 'block'
+    test.forEach(element => {
+        element.style.display = 'block';
+    });
 }
+
+// errorEmptyInput()
 
 const password = document.querySelector('#password');
 password.addEventListener('input', validatePassword);
 
 function validatePassword() {
-    if (password.value.length < 2) {
+    if (password.value.length < 8 ) {
         password.classList.add('error-box')
     } else password.classList.remove('error-box')
+    return true
+
 }
 
-const testSubmitBtn = document.querySelector('#submitBtn')
-testSubmitBtn.addEventListener()
+const submitBtn = document.querySelector('#submitBtn');
+submitBtn.addEventListener('click', errorEmptyInput, validateEmail, validatePassword)
+
+
+
+//
+// const testSubmitBtn = document.querySelector('#submitBtn')
+// testSubmitBtn.addEventListener()
 
 

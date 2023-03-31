@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<script src="./script.js"></script>
+
 <body>
 
 <div class="auth-form">
@@ -22,11 +22,11 @@
     <div class="input-wrapper">
         <label for="email">Email</label>
         <input type="text" name="" id="email" placeholder="Введите Email" class="form-input" oninput="onInputUsernameHandler(event)">
-        <div id="error-emptyWrapper">Поле обязательно для заполнения</div>
+        <div  class="error-emptyWrapper">Поле обязательно для заполнения</div>
 
         <label for="password">Пароль</label>
         <input type="password" name="" id="password" placeholder="Введите Пароль" class="form-input" oninput="validatePassword(event)" >
-        <div id="error-emptyWrapper">Поле обязательно для заполнения</div>
+        <div class="error-emptyWrapper">Поле обязательно для заполнения</div>
     </div>
 
         <div class="checkbox-email">
@@ -35,7 +35,7 @@
             <label for="checkbox">Я согласен получать обновления на почту</label>
 
         </div>
-        <div id="error-emptyWrapper">Поле обязательно для заполнения</div>
+        <div class="error-emptyWrapper">Поле обязательно для заполнения</div>
         <button class="submit-btn" id="submitBtn" oninput="testSubmitBtn">Регистрация</button>
 
 </div>
@@ -43,5 +43,6 @@
 
     
 </body>
+<script src="./script.js"></script>
 
 </html>

@@ -141,7 +141,7 @@ body {
     margin: 5px;
 }
 
-#error-emptyWrapper {
+.error-emptyWrapper {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -151,9 +151,7 @@ body {
     display: none;
 }
 
-.error-emptyWrapper {
-    display: block;
-}
+
 
 
 .error-box {
