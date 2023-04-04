@@ -26,15 +26,6 @@ function validateEmail () {
         return expression.test( String(email).toLowerCase());
     }
 
-    if (!regEpx) {
-        errorEmptyEmail.textContent = "Некорректный Email"
-        email.classList.add('error-box')
-        requaried.style.color = 'red'
-    } else {
-        email.classList.remove('error-box')
-        requaried.style.color = 'gray'
-    }
-
     if (email.value.length === 0) {
         email.classList.add('error-box')
         requaried.style.color = 'red'
@@ -44,6 +35,17 @@ function validateEmail () {
         errorEmptyEmail.style.display = 'none'
         requaried.style.color = 'gray'
     }
+
+    if (!regEpx(email.value)) {
+        errorEmptyEmail.textContent = "Некорректный Email"
+        email.classList.add('error-box')
+        requaried.style.color = 'red'
+    } else {
+        email.classList.remove('error-box')
+        requaried.style.color = 'gray'
+    }
+
+
 
 }
 
@@ -92,7 +94,7 @@ function validateCheckBox () {
 
 function signIn () {
 
-        if (errorEmptyInput, validateEmail, validatePassword) {
+        if (errorEmptyInput && validateEmail && validatePassword) {
             const email = document.querySelector('#email').value;
             const password = document.querySelector('#password').value;
             localStorage.setItem('userEmail', email)
@@ -112,7 +114,7 @@ function validateForm () {
 
 const submitBtn = document.querySelector('#submitBtn');
 submitBtn.addEventListener('click', validateForm);
-// submitBtn.preventDefault()
+submitBtn.preventDefault()
 
 
 
