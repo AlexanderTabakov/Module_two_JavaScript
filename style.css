@@ -2,9 +2,9 @@
 body {
     background-color: #1B2473;
 }
-.auth-form {
+.auth-form, .reg-form {
     width: 600px;
-    height: 420px;
+    height: fit-content;
     border-radius: 20px;
     display: flex;
     position: relative;
@@ -17,8 +17,13 @@ body {
 
 }
 
+.toggle-button {
+    cursor: pointer;
+}
 
 
+
+.reg-form > h2,
 .auth-form > h2 {
     margin-left: auto;
     margin-right: auto;
@@ -33,7 +38,8 @@ body {
 }
 
 
-.auth-form > p {
+.auth-form > p,
+.reg-form > p {
     position: absolute;
     right: 10px;
     top: 0px;
@@ -99,9 +105,7 @@ body {
     height: 52px;
     border-radius: 10px;
     color: white;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto 15px;
     background-color: #1A226B;
 }
 
@@ -117,6 +121,7 @@ body {
     user-select: none;
     /*margin-bottom: 10px;*/
     margin-left: 4px;
+    margin-top: 7px;
 }
 
 .checkbox+label::before {
@@ -164,8 +169,12 @@ body {
     margin: 5px;
 }
 
-.error-emptyWrapper {
-    font-family: 'Roboto';
+#reg-email-error-box,
+#reg-password-error-box,
+#auth-email-error-box,
+#auth-password-error-box,
+#checkbox-error-box {
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
@@ -175,21 +184,13 @@ body {
 }
 
 
-
-
 .error-box {
     border: 3px red solid;
 }
 
-.error-required {
+.required {
     color: gray;
+    margin-left: 5px;
 }
 
-.error-required-password {
-    color: red;
 
-}
-
-.error-required-checkbox {
-    color: red;
-}

@@ -11,42 +11,53 @@
 
 <body>
 
-<div class="auth-form" >
-    <p id="reg-switch">
-        <a href="http://localhost:63342/Module_two_JavaScript/authForm.html?_ijt=ufjqsohe34768k68dtfu26ivmd&_ij_reload=RELOAD_ON_SAVE">Войти</a>
+<div class="reg-form" >
+    <p class="toggle-button" onclick="toggleView()">
+        Войти
     </p>
     <h2 class="form-tile">
         Регистрация
     </h2>
 
     <div class="input-wrapper">
-        <label for="email">Email</label>
-        <div class="">
-            <span class="error-required">*</span>
-            <input type="text" name="" id="email" placeholder="Введите Email" class="form-input" oninput="validateEmail(event)">
-        </div>
-        <div  class="error-emptyWrapper">Поле обязательно для заполнения</div>
+        <label for="reg-email">Email<span class="required">*</span> </label>
+            <input type="text" id="reg-email" placeholder="Введите Email" class="form-input" oninput="validateEmail(event)">
+        <span  id="reg-email-error-box">Поле обязательно для заполнения</span>
 
-        <label for="password">Пароль</label>
-        <div>
-        <span class="error-required-password">*</span>
-        <input type="password" name="" id="password" placeholder="Введите Пароль" class="form-input" oninput="validatePassword(event)" >
-        </div>
-            <div class="error-emptyWrapper error-emptyPassword">Поле обязательно для заполнения</div>
+        <label for="reg-password">Пароль<span class="required">*</span></label>
+        <input type="password" name="" id="reg-password" placeholder="Введите Пароль" class="form-input" oninput="validatePassword(event)" >
+        <span id="reg-password-error-box">Поле обязательно для заполнения</span>
     </div>
 
-        <div class="checkbox-email">
-            <span class="error-required error-required-checkbox" >*</span>
-            <input type="checkbox" name="checkbox" id="checkbox" class="checkbox" value="yes" onchange="validateCheckBox(event)">
+    <input type="checkbox" id="checkbox" class="checkbox" onchange="validateCheckbox(event)">
 
-            <label for="checkbox">Я согласен получать обновления на почту</label>
-
-        </div>
-        <div class="error-emptyWrapper error-empty-checkbox">Поле обязательно для заполнения</div>
-        <button type="submit" class="submit-btn" id="submitBtn">Зарегистрироваться</button>
+    <label for="checkbox">Я согласен получать обновления на почту<span class="required">*</span></label>
+    <span id="checkbox-error-box">Поле обязательно для заполнения</span>
+    <button type="submit" class="submit-btn" onclick="signUp()">Зарегистрироваться</button>
 
 </div>
-   
+
+<div class="auth-form" style="display: none" >
+    <p class="toggle-button" onclick="toggleView()">
+        Регистрация
+    </p>
+    <h2 class="form-tile">
+        Вход
+    </h2>
+
+    <div class="input-wrapper">
+        <label for="auth-email">Email<span id="required">*</span> </label>
+        <input type="text" id="auth-email" placeholder="Введите Email" class="form-input" oninput="validateEmail(event)">
+        <span  id="auth-email-error-box">Поле обязательно для заполнения</span>
+
+        <label for="reg-password">Пароль<span class="required">*</span></label>
+        <input type="password" id="auth-password" placeholder="Введите Пароль" class="form-input" oninput="validatePassword(event)" >
+        <span id="auth-password-error-box">Поле обязательно для заполнения</span>
+    </div>
+
+    <button type="submit" class="submit-btn" onclick="signIn()">Войти</button>
+
+</div>
 
     
 </body>
